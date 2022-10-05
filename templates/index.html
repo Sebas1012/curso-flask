@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hola desde un template!</p>
+    <!-- En caso de querer cargar archivos estaticos(imagenes, css, js, etc) es recomendado crear una nueva carpeta llamada static por
+    fuera de templates y desde ahi cargar nuestros archivos necesarios. SOLO COMO BUENA PRACTICA -->
+    <img src="../static/img/prueba.jpg" alt="">
+
+    <!-- De esta manera cargamos valores desde el archivo python a nuestro HTML. ya sea de tipo variable convencional o de un
+    diccionario -->
+    <p>Este es {{ empleado }} y te dara soporte en {{ tipo }}. Es un {{ datos['tipo'] }} y programa en {{ datos['lenguaje'] }}</p>
+
+    <!-- En este caso buscamos ejecutar codigo python desde nuestro html, por lo mismo usamos {% codigopython %} para poder hacerlo
+    aca en particular usamos un for para recorrer un array-->
+    <ul>Lista Lenguajes:</ul>
+    {% for lenguaje in lenguajes %}
+        <li>{{ lenguaje }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
