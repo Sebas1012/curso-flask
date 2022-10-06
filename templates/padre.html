@@ -10,6 +10,9 @@
     <nav>
         <a href="/hijo1">Hijo 1</a>
         <a href="/hijo2">Hijo 2</a>
+        <!-- Otra forma de hacer referencia a otras paginas es usar el url_for() que lo que hace es ejecutar la funcion que le digamos -->
+        <a href="{{ url_for('hijo1') }}">Hijo 1 con urlfor</a>
+        <a href="{{ url_for('hijo2') }}">Hijo 2 con urlfor</a>
     </nav>
     <br>
     <br>
