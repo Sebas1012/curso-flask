@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block tittle %}
+    {{ super() }}
+    User IP
+{% endblock %}
+
+{% block message %}
+    <div class="container">
+        {% if ip %}
+            <p>&#128172; Bienvenido, su direccion IP es: <b>{{ ip }}</b></p>
+        {% else %}
+            <p>&#128517; No pudimos encontrar tu <b>IP</b>.<br><a href="{{ url_for('index') }}">Intentar de nuevo.</a></p>
+        {% endif %}
+    </div>
+{% endblock %}
